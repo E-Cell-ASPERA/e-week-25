@@ -163,6 +163,38 @@
         
         .rounds {
             background-color: #1a1a1a;
+            position: relative;
+        }
+        
+        /* Blur overlay for rounds section */
+        .rounds-blur-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            background-color: rgba(0, 0, 0, 0.3);
+            z-index: 10;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        /* Secret icon */
+        .secret-icon {
+            font-size: 3rem;
+            color: rgba(255, 255, 255, 0.1);
+            transition: all 0.5s ease;
+            opacity: 0.15;
+            cursor: pointer;
+        }
+        
+        .secret-icon:hover {
+            color: var(--accent);
+            opacity: 1;
+            transform: rotate(360deg);
         }
         
         .rounds-container {
@@ -170,6 +202,8 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
             margin-top: 40px;
+            position: relative;
+            z-index: 1;
         }
         
         .round-card {
@@ -382,46 +416,63 @@
     </section>
     
     <section class="rounds">
+        <!-- New blur overlay with secret icon -->
+        <div class="rounds-blur-overlay">
+            <span class="secret-icon">🤫</span>
+                </div>
+        
         <div class="container">
             <h2 class="section-title animate__animated animate__fadeIn">4 Rounds. 1 Survivor.</h2>
             <div class="rounds-container">
                 <div class="round-card animate__animated animate__fadeInUp">
                     <div class="round-header">
-                        <i class="fas fa-question-circle"></i> Round 1: The Quiz of Fate
+                        <i class="fas fa-question-circle"></i> Round 1: Not so fast
                     </div>
                     <div class="round-content">
-                        <p class="round-objective">Objective: Demonstrate your knowledge and quick thinking.</p>
-                        <p class="round-description">Your first test: knowledge. A high-stakes quiz where every question could be your last. Answer quickly, answer correctly—or risk elimination. The clock is ticking, and so is your chance at survival in this game.</p>
+                        <p class="round-objective"> </p>
+                        <p class="round-description">U2FsdGVkX19qz5v5bX8KsORvVvMwFVUX/ZdhxN3w7qzKP5Zj3oBBrgxMyb3jCv0q  
+                            YgUG5K75aOAoO79kJjSw9tFoYxPtAEVzqUdxzN4Ueq1hMw6TPqDTMSBPpEzT6LYl  
+                            JejDL0JYVbb6m0+kWjCaaFN/vD3ZmtKH4FYsFIP/Xo0=
+                            </p>
                     </div>
                 </div>
                 
                 <div class="round-card animate__animated animate__fadeInUp">
                     <div class="round-header">
-                        <i class="fas fa-user-secret"></i> Round 2: Deception Dual
+                        <i class="fas fa-user-secret"></i> Round 2: Even I too am a coder
                     </div>
                     <div class="round-content">
-                        <p class="round-objective">Objective: Master the art of trust and betrayal.</p>
-                        <p class="round-description">A game of trust and betrayal. Five rounds. Two choices: Share or Steal. Make the wrong move, and your survival is at stake. Will you cooperate for mutual benefit, or betray for personal gain? Who will deceive, and who will be deceived?</p>
+                        <p class="round-objective"> </p>
+                        <p class="round-description">U2FsdGVkX18UN6tGml2pLw3V6fQ7EykjMN/UprFZ1YKyMZ7Gp4DHVzIrlkFc3nMJ  
+                            mF9MGrqLbxaWxpej6JkIuATj5GvCpm6l8oJ7l1D8kRkxsKP0yM27VpUjGmDjcDCY  
+                            Hy+PzI/qk/mT9CIT0dZNrtfB0dwz+PY=
+                            </p>
                     </div>
                 </div>
                 
                 <div class="round-card animate__animated animate__fadeInUp">
                     <div class="round-header">
-                        <i class="fas fa-hand-rock"></i> Round 3: Rock, Paper, Survival!
+                        <i class="fas fa-hand-rock"></i> Round 3: Lol, the look on your face right now!😂
                     </div>
                     <div class="round-content">
-                        <p class="round-objective">Objective: Outsmart your opponent in a deadly version of a classic game.</p>
-                        <p class="round-description">A simple game? Think again. This is no ordinary Rock, Paper, Scissors—every move is a calculated risk. Read your opponent, anticipate their strategy, and execute your plan flawlessly. Outsmart your opponent, or face elimination.</p>
+                        <p class="round-objective"> </p>
+                        <p class="round-description">U2FsdGVkX1/ZF6dYfXp82rktBqg4L9xZidDyyhKljKvU72yF29tLmNq9xQzM6YVH  
+                            mW0UvOkdCksVyVa69JmAVc7H1I6cs1g27Fz3YXErBkXy8r7xAeVYGlBJDW9Kx2i5  
+                            F1NqT8pW7Sz4YkGDBO1Q9rHcGXIqBYE=
+                            </p>
                     </div>
                 </div>
                 
                 <div class="round-card animate__animated animate__fadeInUp">
                     <div class="round-header">
-                        <i class="fas fa-trophy"></i> Round 4: The Final Test
+                        <i class="fas fa-trophy"></i> Bye Bye, see you in battlefield💕
                     </div>
                     <div class="round-content">
-                        <p class="round-objective">Objective: Demonstrate precision, teamwork, and strategic execution.</p>
-                        <p class="round-description">Precision, teamwork, and strategy will determine who stands tall and who falls. A game of skill and execution awaits. Every cut, every mark, every second matters. Will your team rise above the rest and claim the ultimate prize?</p>
+                        <p class="round-objective"> </p>
+                        <p class="round-description">U2FsdGVkX18YwHh9W5A34MK0JL2BzOjS9OXzXVwHbfOAVFjQzZd0tM+KT96Dugcr  
+                            lxlD5w7bn2HRoPaEZ0npsAxiytKi8MY7DiDTCh+XfxOG8WXjQec60EGRFZhRdtsz  
+                            NVhRHZsX5szHtZwG6uVJpqJ4p8D4NHg=
+                            </p>
                     </div>
                 </div>
             </div>
@@ -574,6 +625,11 @@
             // Update countdown every second
             setInterval(updateCountdown, 1000);
             updateCountdown();
+            
+            // Secret icon functionality (optional)
+            document.querySelector('.secret-icon').addEventListener('click', function() {
+                document.querySelector('.rounds-blur-overlay').style.display = 'none';
+            });
         });
     </script>
 </body>
